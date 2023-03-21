@@ -1,42 +1,56 @@
 .banner {
-    background-image: url('../../../assets/nordwood-themes-kRNZiGKtz48-unsplash.jpg');
+    background-image: url('../../../assets/lauren-mancke-aOC7TSLb1o8-unsplash\ \(1\).jpg');
     background-size: cover;
     background-position: center;
     padding: 200px;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 5px;
-    animation: zoom 8s ease-in-out infinite;
+    animation: zoom 12s ease-in-out infinite;
    
   }
+
+  .banner::before {
+    content: ""; 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 572px;
+    background-color: black;
+    opacity: .4;
+    border-radius: 20px;
+}
   
   h1 {
     font-size: 46px;
     margin-bottom: 10px;
     font-weight: bolder;
     animation: slidein 1s ease-in-out forwards;
+    color:lightskyblue;
   }
-  
+
   p {
     font-size: 18px;
     margin-bottom: 20px;
     animation: slidein 1s ease-in-out forwards;
+    color:rgb(195, 223, 240);
   }
   
-  button {
-    background-color: #4CAF50;
-    color: #fff;
+   .banner-button {
+    background-color: rgba(17, 185, 50, 0.8);
+    color: white;
     border: none;
+    border-radius: 3px;
     padding: 10px 20px;
     font-size: 18px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
   
-  button:hover {
-    background-color: #3e8e41;
-  }
+  
+
+  
 
   @keyframes zoom {
     0% {
@@ -70,8 +84,32 @@
     h1{
         font-size: 24px;
         font-weight: bold;
-        color:darkslategrey;
+        color:lightskyblue;
     }
+    .banner::before {
+        content: ""; 
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .4;
+        border-radius: 20px;
+    }
+    p{
+        color:rgb(195, 223, 240);
+    }
+    .banner-button {
+        background-color: rgba(17, 185, 50, 0.8);
+        color: white;
+        border: none;
+        border-radius: 1px;
+        padding: 5px 10px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
   }
   
   @media only screen and (max-width: 576px) {
@@ -81,6 +119,19 @@
      h1 {
         font-size: 24px;
         font-weight: bold;
-        color:darkslategrey;
+        color:lightskyblue;
     }
+    p{
+        color:rgb(195, 223, 240);
+    }
+    .banner-button {
+        background-color: rgba(17, 185, 50, 0.8);
+        color: white;
+        border: none;
+        border-radius: 1px;
+        padding: 5px 10px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
   }
