@@ -1,0 +1,86 @@
+.banner {
+    background-image: url('../../../assets/nordwood-themes-kRNZiGKtz48-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 200px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    animation: zoom 8s ease-in-out infinite;
+   
+  }
+  
+  h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    animation: slidein 1s ease-in-out forwards;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation: slidein 1s ease-in-out forwards;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slidein {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    .banner {
+      padding: 10px;
+
+    }
+    h1{
+        font-size: 24px;
+        font-weight: bold;
+        color:darkslategrey;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .banner {
+      padding: 5px;
+    }
+     h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color:darkslategrey;
+    }
+  }

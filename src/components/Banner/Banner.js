@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import "./Banner.css";
+
 
 const Banner = () => {
   return (
-    <div>Hi</div>
+    <div>
+      <div className="banner">
+      <h1>Welcome to our website!</h1>
+      <p>Explore our products and services.</p>
+      <button>Learn More</button>
+    </div>
+    </div>
   )
 }
 
