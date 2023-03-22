@@ -17,11 +17,11 @@ const Header = () => {
         <li tabIndex={0}>
          
         </li>
-        <li><a>Sign Up</a></li>
+        <li><a>  <Link to='/signup'>Sign Up</Link></a></li>
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl">
-      <Link to='/home'>Home</Link>
+      <Link to='/'>Home</Link>
        </a>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -32,7 +32,9 @@ const Header = () => {
       <li tabIndex={0}>
        
       </li>
-      <li><a>Sign Up</a></li>
+      <li><a>
+        <Link to='/signup'>Sign Up</Link>
+        </a></li>
     </ul>
   </div>
   <div className="navbar-end">
