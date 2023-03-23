@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './AdvertisedItems.css'
 
 const AdvertisedItems = () => {
@@ -13,8 +14,10 @@ useEffect(()=>{
 
   return (
     <div>
+        
        <h1 className='font-bold text-center ' >Your Advertised Items</h1>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-y-10 ml-10	'>
+        
        
         {
             datas.map((data) => {
@@ -31,9 +34,16 @@ useEffect(()=>{
             
             
             })
+            
         }
+        <div className='ml-auto'>
+    <Link className='btn btn-primary '>See All</Link>
+    </div>
+       
     </div>
     </div>
+    
+    
   )
 }
 
