@@ -14,6 +14,7 @@ const SignUp = () => {
     .then(result =>{
       const user = result.user;
       console.log(user)
+      savedUser(data.email, data.role)
       toast("User  Created SuccessFul")
     })
     .catch(error => {
@@ -22,6 +23,20 @@ const SignUp = () => {
 
   }
 
+    const savedUser = (email, role)=>{
+      const user ={email,role}
+      fetch('http://localhost:5000/api/users',{
+        method: "POST",
+        headers: {
+          "content-type":"application/json"
+        },
+        body: JSON.stringify(user)
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+      })
+    }
 
   return (
     <div>
@@ -54,7 +69,7 @@ const SignUp = () => {
 
   <option>Seller</option>
   <option>Buyer</option>
-  <option>Admin</option>
+  
 </select>
 
 {/* <p>{data}</p> */}

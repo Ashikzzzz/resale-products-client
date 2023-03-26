@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Category from "../Category/Category";
 import Home from "../Home/Home";
+import IndividualProduct from "../IndividualProduct/IndividualProduct";
 import Main from "../layout/Main";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
@@ -26,9 +27,19 @@ export const router = createBrowserRouter([
                 path: '/api/categoryname/:category_name',
                 element: <Category></Category>,
                 loader: ({params})=>{
-                  return  fetch(`http://localhost:5000/api/categoryname/${params.category_name}`)
+                  return  fetch(`http://localhost:5000/api/category/${params.category_name}`)
                 }
+            },
+           {
+            path: "/categoryname/:id",
+            element:<IndividualProduct></IndividualProduct> ,
+            loader: ({params})=>{
+                console.log(params)
+                return fetch(`http://localhost:5000/api/categoryname/${params.id}` )
+                
             }
+            
+           }
         ]
     }
 ])
