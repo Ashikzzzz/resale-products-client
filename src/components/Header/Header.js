@@ -36,6 +36,9 @@ const handleLogOut=()=>{
          
         </li>
         <li><a>  <Link to='/signup'>Sign Up</Link></a></li>
+        <li><a>
+        <Link to='/dashboard'>Dashboard</Link>
+        </a></li>
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl">
@@ -58,6 +61,10 @@ const handleLogOut=()=>{
       <li><a>
         <Link to='/signup'>Sign Up</Link>
         </a></li>
+      <li><a>
+        <Link to='/dashboard'>Dashboard</Link>
+        </a></li>
+
     </ul>
   </div>
   <div className="navbar-end">
